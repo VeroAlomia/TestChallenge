@@ -1,0 +1,64 @@
+Step 1: Set Up Git Flow
+
+Make sure you have Git installed on your system. You can download it from the official website: https://git-scm.com/downloads
+Install Git Flow extension (if not already installed):
+On Linux/macOS: You can often use a package manager like brew or apt to install it.
+On Windows: You can download and install the extension from https://github.com/nvie/gitflow/wiki/Windows
+
+Step 2: Initialize Git Flow
+
+Open your terminal and navigate to your Git repository.
+Initialize Git Flow by running:
+
+ 
+
+Follow the prompts to set up the main branch names (e.g., master and develop) and other configurations.
+
+Step 3: Start a New Feature
+
+To begin working on a new feature, create a new feature branch based on the develop branch:
+
+ 
+
+Replace feature-name with a descriptive name for your feature.
+Make your code changes in this feature branch and commit them.
+
+Step 4: Finish a Feature
+
+Once your feature is ready, finish the feature branch:This merges your feature branch into the develop branch and removes the feature branch.
+
+Step 5: Start a Release
+
+When you're ready to prepare a release, create a new release branch based on the develop branch:
+
+ 
+
+Replace release-version with the version number of the release.
+Perform any necessary release-related tasks, such as updating version numbers, documentation, and testing.
+
+Step 6: Finish a Release
+
+Once the release is ready, finish the release branch:This merges the release branch into both develop and master branches, tags the release, and removes the release branch.
+
+Step 7: Hotfixes (Optional)
+
+If critical issues arise in the master branch, you can create a hotfix branch to address them:
+
+ 
+
+Similar to releases, hotfix-version should be the version number you're fixing.
+Make the necessary changes and finish the hotfix:
+
+Step 8: Pushing and Pulling
+
+Regularly push your local branches to the remote repository:
+When you want to get the latest updates from the remote repository, pull changes:
+Copy codegit pull origin branch-name
+perlCopy codegit push origin branch-name
+cssCopy codegit flow hotfix finish hotfix-version
+cssCopy codegit flow hotfix start hotfix-version
+arduinoCopy codegit flow release finish release-version
+sqlCopy codegit flow release start release-version
+cssCopy codegit flow feature finish feature-name
+cssCopy codegit flow feature start feature-name
+csharpCopy codegit flow init
